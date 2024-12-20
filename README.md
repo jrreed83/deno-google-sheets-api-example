@@ -14,7 +14,11 @@ This is a simple program that shows how to read and write from a Google Sheet us
    base64 -i <YOUR JWT FILE NAME>.json -w 0
    ```
    The `-w 0` eliminates line wrapping.
-7. Create a `.env` file in the project and add the encoded JWT and your spreadsheet ID.
+7. Create a `.env` file in the project and add the encoded JWT and your spreadsheet ID.  The file should look like this: 
+   ```
+   SHEET_ID=xxxxxxxxxxxxxxx
+   GOOGLE_CREDENTIALS_BASE64=xxxxxxxxxxxxxxxxxxx
+   ```
 
 # Remarks
 
