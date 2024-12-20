@@ -22,6 +22,15 @@ using [Deno](https://deno.com/).
    GOOGLE_CREDENTIALS_BASE64=xxxxxxxxxxxxxxxxxxx
    ```
 
+# Run 
+
+To run the script, give it permission to read from the file system.  Passing `--env` instructs the script to 
+read variables in your `.env` file.
+
+```
+deno run --allow-all --env main.ts
+```
+
 # Remarks and Gotchas
 
 * You can read the contents of the Google Sheet with an API KEY, but it won't let you update the sheet.  

@@ -1,6 +1,5 @@
 import { google } from "googleapis";
 import { Buffer } from 'node:buffer';
-import "jsr:@std/dotenv/load";
 
 
 // Load the credentials from the environment variable and convert to a JSON object
