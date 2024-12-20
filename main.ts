@@ -5,10 +5,12 @@ import "jsr:@std/dotenv/load";
 
 // Load the credentials from the environment variable and convert to a JSON object
 const jwt_base64  = Deno.env.get("GOOGLE_CREDENTIALS_BASE64");
+
+// Thanks to the Trigger.dev documentation for providing this authorization code snippet:
+// https://trigger.dev/docs/deploy-environment-variables#using-google-credential-json-files
 const credentials = JSON.parse(
   Buffer.from(jwt_base64, "base64").toString("utf8")
 );
-
 
 const auth = new google.auth.GoogleAuth({
   credentials,
