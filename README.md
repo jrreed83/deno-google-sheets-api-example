@@ -28,7 +28,7 @@ To run the script, give it permission to read from the file system.  Passing `--
 read variables in your `.env` file.
 
 ```
-deno run --allow-all --env main.ts
+deno run --allow-all --env-file main.ts
 ```
 
 # Remarks and Gotchas
