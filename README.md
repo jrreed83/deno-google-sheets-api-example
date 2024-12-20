@@ -6,8 +6,19 @@ This is a simple program that shows how to read and write from a Google Sheet us
 
 1. Start a new Google Cloud Platform project in the Google Cloud Console at `https://console.cloud.google.com`.
 2. Enable the Google Sheets API.
-3. Set it up as a Service Account.
-4. Download the JSON Web Token
+3. Set it up as a Service Account in the Credentials Section.  This will enable JSON Web Token (JWT) authorization.
+4. Download the JWT.
 5. Share the Google Sheet with the email address automatically generated when setting up the Service Account.
+6. Base64 encode the JWT.  This is in preparation of uploading it as a credential in Trigger.dev or Digital Ocean
+   ```
+   base64 -i <YOUR JWT FILE NAME>.json -w 0
+   ```
+   The `-w 0` eliminates line wrapping.
+7. Create a `.env` file in the project and add the encoded JWT and your spreadsheet ID.
+
+# Remarks
+
+* You can read the contents of the Google Sheet with an API KEY, but it won't let you update the sheet.  
+
 
 
