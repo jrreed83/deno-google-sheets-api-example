@@ -1,6 +1,8 @@
 # Description
 
-This is a simple program that shows how to read and write from a Google Sheet using [Deno](https://deno.com/).
+This is a simple program that shows how to read and write a few "random" cells from a Google Sheet 
+using [Deno](https://deno.com/).
+
 
 # Setup
 
