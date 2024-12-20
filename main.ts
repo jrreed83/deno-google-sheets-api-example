@@ -22,10 +22,18 @@ console.log(`Auth OK: ${client}`);
 
 const sheets = google.sheets({version: "v4", auth: client});
 const sheet_id = Deno.env.get("SHEET_ID");
-console.log(sheet_id);
-const res = await sheets.spreadsheets.values.get({
+
+const result = await sheets.spreadsheets.values.get({
     spreadsheetId: sheet_id,
-    range: "Sheet1!A1"
+    range: "Sheet1!A2:D4"
 });
 
-console.log(res.data);
+console.log(result.data);
+
+await sheets.spreadsheets.values.update({
+    spreadsheetId: sheet_id,
+    auth: client,
+    range: "Sheet1!E2",
+    resource: { values: [["hello"]]},
+    valueInputOption: "USER_ENTERED"
+})
