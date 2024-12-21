@@ -34,9 +34,9 @@ console.log(result.data);
 await sheets.spreadsheets.values.update({
     spreadsheetId: sheet_id,
     auth: client,
-    range: "Sheet1!E3",
-    requestBody: { 
-      values: [["hello from deno!"]]
+    range: "Sheet1!E6",
+    resource: { 
+      values: [["hello from deno, test!!"]]
     },
     valueInputOption: "USER_ENTERED"
 })
